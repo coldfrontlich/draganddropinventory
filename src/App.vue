@@ -2,21 +2,20 @@
 import { defineComponent } from 'vue'
 import Footer from './components/Footer.vue'
 import Sidebar from './components/Sidebar.vue'
+import Grid from './components/Grid.vue'
 </script>
 
 <template>
 	<div class="app">
-		<div class="content">
-      <Sidebar />
-			<main class="app__main">
-				<div class="main__grid">
-					<div class="grid__item grid__item--1">4</div>
-					<div class="grid__item grid__item--2">2</div>
-					<div class="grid__item grid__item--3">5</div>
-				</div>
-			</main>
+		<div class="wrapper">
+			<div class="content">
+				<Sidebar />
+				<main class="app__main">
+					<Grid />
+				</main>
+			</div>
+			<Footer />
 		</div>
-		<Footer />
 	</div>
 </template>
 
@@ -24,16 +23,18 @@ import Sidebar from './components/Sidebar.vue'
 .app {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	height: 100vh;
 }
 
 .content {
 	display: flex;
-	justify-content: space-between;
 	flex-grow: 1;
 	overflow: auto;
-  padding: 2rem 2rem 1.5rem 2rem;
+	padding: 2rem 2rem 1.5rem 2rem;
 }
 
+.wrapper {
+  margin: auto
+}
 </style>
