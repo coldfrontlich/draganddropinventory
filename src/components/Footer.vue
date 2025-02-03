@@ -16,7 +16,6 @@ import Skeleton from './Skeleton.vue'
 <style lang="scss" scoped>
 .footer {
 	min-height: 60px;
-	width: 100%;
 	background-color: #262626;
 	color: white;
 	text-align: center;
@@ -24,6 +23,9 @@ import Skeleton from './Skeleton.vue'
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-content {

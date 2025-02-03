@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue';
-import Footer from "./components/Footer.vue"
-
+import { defineComponent } from 'vue'
+import Footer from './components/Footer.vue'
+import Sidebar from './components/Sidebar.vue'
 </script>
 
 <template>
 	<div class="app">
 		<div class="content">
-			<aside class="app__sidebar">
-				<div class="sidebar__image"></div>
-				<div class="sidebar__content">
-					<h2 class="sidebar__title">Title</h2>
-					<p class="sidebar__description">Description goes here.</p>
-				</div>
-			</aside>
+      <Sidebar />
 			<main class="app__main">
 				<div class="main__grid">
 					<div class="grid__item grid__item--1">4</div>
@@ -22,7 +16,7 @@ import Footer from "./components/Footer.vue"
 				</div>
 			</main>
 		</div>
-    <Footer />
+		<Footer />
 	</div>
 </template>
 
@@ -32,16 +26,14 @@ import Footer from "./components/Footer.vue"
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	padding: 2rem;
 }
 
 .content {
 	display: flex;
 	justify-content: space-between;
+	flex-grow: 1;
+	overflow: auto;
+  padding: 2rem 2rem 1.5rem 2rem;
 }
 
-.app__sidebar {
-	background-color: #4d4d4d;
-	min-width: 31.2rem;
-}
 </style>
