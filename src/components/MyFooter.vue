@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		<div class="footer-content">
+		<div class="footer__content">
 			<div class="skeleton-container">
 				<Skeleton />
 			</div>
@@ -28,7 +28,7 @@ import Skeleton from './Skeleton.vue'
   margin-bottom: 2rem;
 }
 
-.footer-content {
+.footer__content {
 	position: relative;
 	width: 100%;
 }

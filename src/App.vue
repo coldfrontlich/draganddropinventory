@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue'
-import Footer from './components/Footer.vue'
+import MyFooter from './components/MyFooter.vue'
 import Sidebar from './components/Sidebar.vue'
 import Grid from './components/Grid.vue'
 </script>
 
 <template>
 	<div class="app">
-		<div class="wrapper">
-			<div class="content">
+		<div class="app__wrapper">
+			<div class="app__content">
 				<Sidebar />
 				<main class="app__main">
 					<Grid />
 				</main>
 			</div>
-			<Footer />
+			<MyFooter />
 		</div>
 	</div>
 </template>
@@ -27,14 +26,14 @@ import Grid from './components/Grid.vue'
 	height: 100vh;
 }
 
-.content {
+.app__content {
 	display: flex;
 	flex-grow: 1;
 	overflow: auto;
 	padding: 2rem 2rem 1.5rem 2rem;
 }
 
-.wrapper {
+.app__wrapper {
   margin: auto
 }
 </style>
