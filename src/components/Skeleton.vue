@@ -1,6 +1,6 @@
 <template>
 	<div class="skeleton-wrapper">
-		<div class="skeleton" :style="{ height: height + 'px' }"></div>
+		<div class="skeleton" :style="{ height: defaultHeight + 'px' }"></div>
 	</div>
 </template>
 
@@ -32,13 +32,12 @@
 </style>
 
 <script setup lang="ts">
-import { defineProps, withDefaults } from 'vue'
+import { defineProps} from 'vue'
 
 interface Props {
   height?: number
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  height: 40, 
-});
+const props = defineProps<Props>();
+const defaultHeight = props.height ?? 40;
 </script>

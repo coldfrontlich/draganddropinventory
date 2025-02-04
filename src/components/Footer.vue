@@ -4,12 +4,12 @@
 			<div class="skeleton-container">
 				<Skeleton />
 			</div>
-			<span class="close-icon" @click="handleClose">&#10005;</span>
+			<span class="close-icon">&#10005;</span>
 		</div>
 	</footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Skeleton from './Skeleton.vue'
 </script>
 

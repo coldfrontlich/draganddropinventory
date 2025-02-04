@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import MyFooter from './components/MyFooter.vue'
-import Sidebar from './components/Sidebar.vue'
-import Grid from './components/Grid.vue'
-</script>
-
 <template>
 	<div class="app">
 		<div class="app__wrapper">
@@ -13,10 +7,16 @@ import Grid from './components/Grid.vue'
 					<Grid />
 				</main>
 			</div>
-			<MyFooter />
+			<Footer />
 		</div>
 	</div>
 </template>
+
+<script setup lang="ts">
+import Sidebar from './components/Sidebar.vue'
+import Grid from './components/Grid.vue'
+import Footer from './components/Footer.vue';
+</script>
 
 <style scoped>
 .app {
